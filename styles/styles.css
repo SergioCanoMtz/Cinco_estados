@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #2450a3;
+}
+
+
+.main .bloques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.main .bloques .bloqueUno,
+.main .bloques .bloqueDos{
+    display: flex;
+    align-items: center; 
+}
+
+.main .bloques  .bloqueUno .bloque,
+.main .bloques  .bloqueDos .bloque{
+    border: 10px solid rgb(7, 7, 7);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+    background: rgba(231, 12, 12, 0);
+} 
+
+.main .bloques  .bloqueUno .pru,
+.main .bloques  .bloqueDos .pru{
+    margin: 0 20px;
+    font-size: 50px;
+}
+
+.main .bloques .dosflechas{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    font-size: 50px;
+    margin: 0 20px;
+}
+
+.main .bloques .dosflechas .pro{
+    margin-bottom: 20px;
+}
+
+.main .arriba{
+    font-size: 50px;
+    position: relative;
+    left: 38%;
+    margin-top: 40px;
+}
+
+.main .rotado{
+    font-size: 50px;
+    position: relative;
+    left: 50%;
+    margin-top: 40px;
+    transform: rotate(50deg);
+}
+
+.main .bloques .bloqueUltimo{
+    margin: 35px 45px;
+}
+
+.main .bloques .bloqueUltimo .bloque{
+    border: 10px solid rgb(7, 7, 7);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+    background: rgba(231, 12, 12, 0);
+}
+
+.main .bloques .bloqueUltimo .hidden{
+    background: rgba(231, 12, 12, 0);
+    border: 10px solid rgba(7, 7, 7, 0);
+}
