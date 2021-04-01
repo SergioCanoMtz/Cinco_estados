@@ -5,9 +5,19 @@
 }
 
 body{
-    background: #2450a3;
+    background: #212326;
+    color: #fff;
 }
 
+header h1{
+    font-family: 'Livvic', sans-serif;
+    color: #fff;
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1.9px solid rgb(45, 137, 243);
+}
 
 .main .bloques{
     display: flex;
@@ -26,11 +36,13 @@ body{
 
 .main .bloques  .bloqueUno .bloque,
 .main .bloques  .bloqueDos .bloque{
-    border: 10px solid rgb(7, 7, 7);
+    border: 7px solid rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     border-radius: 10px;
-
+    font-size: 20px;
+    text-align: center;
+    padding: 80px 0;
     background: rgba(231, 12, 12, 0);
 } 
 
@@ -38,6 +50,7 @@ body{
 .main .bloques  .bloqueDos .pru{
     margin: 0 20px;
     font-size: 50px;
+    color: rgb(45, 137, 243);
 }
 
 .main .bloques .dosflechas{
@@ -46,6 +59,7 @@ body{
     width: 50px;
     font-size: 50px;
     margin: 0 20px;
+    color: rgb(45, 137, 243);
 }
 
 .main .bloques .dosflechas .pro{
@@ -57,30 +71,87 @@ body{
     position: relative;
     left: 38%;
     margin-top: 40px;
+    color: rgb(45, 137, 243);
 }
 
 .main .rotado{
     font-size: 50px;
     position: relative;
+    color: rgb(45, 137, 243);
     left: 50%;
     margin-top: 40px;
     transform: rotate(50deg);
 }
 
-.main .bloques .bloqueUltimo{
+.main .bloques2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 5px auto;
+   
+}
+
+.main .bloques2 .botones p{
+    display: inline;
+    font-size: 20px;
+    font-family: 'Livvic', sans-serif;
+}
+
+.main .bloques2 .botones p input{
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.main .bloques2 .botones .buttons{
+    display: flex;
+    justify-content:space-between ;
+}
+
+.main .bloques2 .botones .buttons button{
+    background: rgb(13, 89, 189);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 49%;
+    font-family: 'Livvic', sans-serif;
+    font-size: 17px;
+    color: #fff;
+}
+
+.main .bloques2 .botones .buttons button:hover{
+    background: rgb(91, 151, 230);
+}
+
+.main .bloques2 .botones .buttons .btnOne{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.main .bloques2 .botones .buttons .btnTwo{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.main .bloques2 .bloqueUltimo{
     margin: 35px 45px;
 }
 
-.main .bloques .bloqueUltimo .bloque{
-    border: 10px solid rgb(7, 7, 7);
+.main .bloques2 .bloqueUltimo .bloque{
+    border: 10px solid rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     border-radius: 10px;
-
-    background: rgba(231, 12, 12, 0);
+    font-size: 20px;
+    text-align: center;
+    padding: 80px 0;
+    background: rgba(255, 255, 255, 0);
 }
 
-.main .bloques .bloqueUltimo .hidden{
+.main .bloques2 .bloqueUltimo .hidden{
     background: rgba(231, 12, 12, 0);
     border: 10px solid rgba(7, 7, 7, 0);
 }
