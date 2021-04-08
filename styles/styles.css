@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+@keyframes grande{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
 body{
     background: #212326;
     color: #fff;
@@ -13,10 +25,26 @@ header h1{
     font-family: 'Livvic', sans-serif;
     color: #fff;
     width: 95%;
-    margin: 10px auto;
+    margin: 20px auto;
+    margin-top: 0;
     padding: 10px;
     text-align: center;
     border-bottom: 1.9px solid rgb(45, 137, 243);
+}
+
+.main .titulosP{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main .titulosP p{
+    display: inline;
+    font-size: 19px;
+    text-align: center;
+    font-family: 'Livvic', sans-serif;
+    /* margin-left: 100px; */
 }
 
 .main .bloques{
@@ -36,7 +64,7 @@ header h1{
 
 .main .bloques  .bloqueUno .bloque,
 .main .bloques  .bloqueDos .bloque{
-    border: 7px solid rgb(255, 255, 255);
+    border: 5px solid rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -46,11 +74,24 @@ header h1{
     background: rgba(231, 12, 12, 0);
 } 
 
+.main .bloques  .bloqueUno .bloque div{
+    transform: translate(170px,-23px);
+    transition-duration: 1s;
+    /* background: #fff;
+    color: black;
+    display: inline;
+    padding: 3px;
+    border-radius: 2px; */
+}
+
 .main .bloques  .bloqueUno .pru,
 .main .bloques  .bloqueDos .pru{
     margin: 0 20px;
     font-size: 50px;
     color: rgb(45, 137, 243);
+    animation-name: grande;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .main .bloques .dosflechas{
@@ -60,6 +101,9 @@ header h1{
     font-size: 50px;
     margin: 0 20px;
     color: rgb(45, 137, 243);
+    animation-name: grande;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .main .bloques .dosflechas .pro{
@@ -72,6 +116,9 @@ header h1{
     left: 38%;
     margin-top: 40px;
     color: rgb(45, 137, 243);
+    animation-name: grande;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .main .rotado{
@@ -81,6 +128,9 @@ header h1{
     left: 50%;
     margin-top: 40px;
     transform: rotate(50deg);
+    animation-name: grande;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .main .bloques2{
@@ -116,7 +166,7 @@ header h1{
     padding: 10px 15px;
     cursor: pointer;
     margin-top: 20px;
-    width: 49%;
+    width: 48%;
     font-family: 'Livvic', sans-serif;
     font-size: 17px;
     color: #fff;
@@ -124,6 +174,7 @@ header h1{
 
 .main .bloques2 .botones .buttons button:hover{
     background: rgb(91, 151, 230);
+    transform: scale(1.045);
 }
 
 .main .bloques2 .botones .buttons .btnOne{
@@ -141,7 +192,7 @@ header h1{
 }
 
 .main .bloques2 .bloqueUltimo .bloque{
-    border: 10px solid rgb(255, 255, 255);
+    border: 5px solid rgb(255, 255, 255);
     width: 200px;
     height: 200px;
     border-radius: 10px;

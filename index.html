@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/21e95ae838.js" crossorigin="anonymous"></script>
     <title>Proceso de 5 estados</title>
 </head>
@@ -17,12 +17,18 @@
 
     <section class="main">
 
-        <div class="bloques">
+        <div class="titulosP">
+            <p>Nuevo</p>
+            <p>Listo</p>
+            <p>Ejecutando</p>
+            <p>Saliente</p>
+        </div>
 
+        <div class="bloques">
             <div class="bloqueUno">
                 <div class="bloque" id="nuevo"></div>
                 <i class="pru fas fa-arrow-circle-right"></i>
-                <div class="bloque"></div>
+                <div class="bloque" id="listo"></div>
             </div>
 
             <div class="dosflechas">
@@ -31,9 +37,9 @@
             </div>
                 
             <div class="bloqueDos">
-                <div class="bloque"></div>
+                <div class="bloque" id="ejecutando"></div>
                 <i class="pru fas fa-arrow-circle-right"></i>
-                <div class="bloque"></div>
+                <div class="bloque" id="saliente"></div>
             </div>
             
         </div>
@@ -44,15 +50,16 @@
         <div class="bloques2">
 
             <div class="botones">
-                <p>Nombre del Proceso: <input type="text" id="nombre" onkeyup="nuevo()"></p>   
+                <p>Nombre del Proceso: <input type="text" id="nombre" ></p>   
                 <div class="buttons">
-                    <button class="btnOne">Crear proceso</button>
+                    <br>
+                    <button class="btnOne" id="btnCreate">Crear proceso</button>
                     <button class="btnTwo">Terminar procesos</button>
                 </div>
             </div>
 
             <div class="bloqueUltimo">      
-                <div class="bloque"></div>
+                <div class="bloque" id="bloqueado"></div>
             </div>
 
             <div class="bloqueUltimo">
