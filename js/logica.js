@@ -76,35 +76,6 @@
             }
         }        
     }
-    
-    /* num++; */
-
-    /* listo = nuevo.slice(); */
-
-    /* if(ejecutando == null || ejecutando == ''){
-        ejecutando.push(listo[0]);
-        listo.shift(0);
-    } else{
-        var numRandom = getRandomInt(3,6); //4
-
-        if(numRandom === 3){
-            listo.push(ejecutando[0]);
-            ejecutando.shift(0);
-            ejecutando.push(listo[0]);
-            listo.shift(0);
-        } else if(numRandom === 4){
-            bloqueado.push(ejecutando[0]);
-            ejecutando.shift(0);
-            ejecutando.push(listo[0]);
-            listo.shift(0);
-        } else if(numRandom === 5){
-            saliente.push(ejecutando[0]);
-            ejecutando.shift(0);
-            ejecutando.push(listo[0]);
-            listo.shift(0);
-        }
-    }
-//}
-
+/* 
 setInterval('saludo()',15000);
-setTimeout(saludo, 3000); */
+setTimeout(saludo, 3000);  */
