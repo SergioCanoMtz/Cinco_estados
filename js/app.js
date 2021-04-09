@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){  
-    
     var nombre = document.getElementById('nombre');
     var btnCreate = document.getElementById('btnCreate');
     var id = 0;
@@ -27,16 +26,15 @@ document.addEventListener('DOMContentLoaded', function(){
         if(nombre.value == '' || nombre.value == null){
             alert('Ingresa el nombre de un Proceso');
         } else{
-            /* document.getElementById('bg-white').style.transform = 'translate(100px,100px)';
-            document.getElementById('bg-white').style.transitionDuration = '1s'; */
-            /* var proceso = document.createElement('p');
+            
+            var proceso = document.createElement('p');
             var contenido = document.createTextNode(document.getElementById('bg-white').value);
             proceso.appendChild(contenido);
 
             proceso.setAttribute('class','caja');
 
             var contenedor = document.getElementById('listo');
-            contenedor.appendChild(proceso); */
+            contenedor.appendChild(proceso);
 
         }
     })
