@@ -16,6 +16,29 @@
     }
 }
 
+@keyframes grandeRotado{
+    0%{
+        
+        transform: scale(1,1);
+        transform: rotate(50deg);
+        
+    }
+    50%{
+        transform: rotate(95deg);
+        transform: scale(1.2,1.2);
+        
+    }
+    100%{
+        /* transform: rotate(50deg); */
+        transform: scale(1,1);
+        transform: rotate(50deg);
+        
+    }
+
+    /* transform: rotate(50deg); */
+}
+
+
 body{
     background: #212326;
     color: #fff;
@@ -127,10 +150,11 @@ header h1{
     color: rgb(45, 137, 243);
     left: 50%;
     margin-top: 40px;
-    transform: rotate(50deg);
-    animation-name: grande;
+    
+    animation-name: grandeRotado;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    /* transform: rotate(50deg); */
 }
 
 .main .bloques2{
