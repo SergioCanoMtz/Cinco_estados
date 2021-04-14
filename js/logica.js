@@ -38,60 +38,95 @@
         }
 
         listo = nuevo.slice();
-
         if(ejecutando.length === 0){
             ejecutando.push(listo[0]);
-            console.log(listo[0]+' pasa de listo a ejecutando '+(id++));
-            /* console.log(listo[0]+' se elimina de listo '+(id++)); */
+            console.log(listo[0]+' pasa de listo a ejecutando ');
+            /* console.log(listo[0]+' se elimina de listo '); */
             listo.shift(0);
         }
 
-        while(ejecutando.length > 0){
+        while(ejecutando.length > 0 || bloqueado.length > 0 /*|| listo.length === 0*/ ){
             sleep(2000);
-            var numRandom = getRandomInt(3,6); //4
-            if(numRandom === 3){
-                listo.push(ejecutando[0]);
-                console.log(ejecutando[0]+' pasa de ejecutando a listo '+(id++));
-                sleep(2000);
-                /* console.log(ejecutando[0]+' Se elimina de ejecutando '+(id++)) */
-                ejecutando.shift(0);
-                ejecutando.push(listo[0]);
-                console.log(listo[0]+' pasa de listo a ejecutando '+(id++));
-                sleep(2000);
-                /* console.log(listo[0]+' se elimina de listo '+(id++)) */
-                listo.shift(0);
-            } else if(numRandom === 4){
-                bloqueado.push(ejecutando[0]);
-                console.log(ejecutando[0]+' pasa de ejecutando a bloqueado '+(id++));
-                sleep(2000);
-                /* console.log(ejecutando[0]+' Se elimina de ejecutando '+(id++)) */
-                ejecutando.shift(0);
-                listo.push(bloqueado[0]);
-                console.log(bloqueado[0]+' pasa de bloqueado a listo '+(id++));
-                sleep(2000);
-                /* console.log(bloqueado[0]+' se elimina de bloqueado '+(id++)); */
-                bloqueado.shift(0);
-                if(listo.length > 0 ){
-                    ejecutando.push(listo[0]);
-                    console.log(listo[0]+' pasa de listo a ejecutando '+(id++));
+            var numRandom = getRandomInt(3,7); //4
+            if(ejecutando.length === 0){
+                if(listo.length === 0){
+                    listo.push(bloqueado[0]);
+                    console.log(bloqueado[0]+' pasa de bloqueado a listo');
+                    bloqueado.shift(0);
                     sleep(2000);
-                    /* console.log(listo[0]+' se elimina de listo '+(id++)); */
-                    listo.shift(0);
                 }
+                ejecutando.push(listo[0]);
+                console.log(listo[0]+' pasa de listo a ejecutando ');
+               /* console.log(listo[0]+' se elimina de listo '); */
+                listo.shift(0);
+                sleep(2000);
+                
+            }
+            if(numRandom === 3){
+                if(ejecutando.length > 0){
+                    listo.push(ejecutando[0]);
+                    console.log(ejecutando[0]+' pasa de ejecutando a listo ');
+                    sleep(2000);
+                    /* console.log(ejecutando[0]+' Se elimina de ejecutando ') */
+                    ejecutando.shift(0);
+                    ejecutando.push(listo[0]);
+                    console.log(listo[0]+' pasa de listo a ejecutando ');
+                    sleep(2000);
+                    /* console.log(listo[0]+' se elimina de listo ') */
+                    listo.shift(0);
+                    if(bloqueado.length > 0 && listo.length ===0){
+                        listo.push(bloqueado[0]);
+                        console.log(bloqueado[0]+' pasa de bloqueado a listo');
+                        bloqueado.shift(0);
+                        sleep(2000);
+                    }
+                }
+                
+            } else if(numRandom === 4){
+                if(ejecutando.length > 0){
+                    bloqueado.push(ejecutando[0]);
+                    console.log(ejecutando[0]+' pasa de ejecutando a bloqueado ');
+                    sleep(2000);
+                    /* console.log(ejecutando[0]+' Se elimina de ejecutando ') */
+                    ejecutando.shift(0);
+                    
+                    if(listo.length > 0 ){
+                        ejecutando.push(listo[0]);
+                        console.log(listo[0]+' pasa de listo a ejecutando ');
+                        sleep(2000);
+                        /* console.log(listo[0]+' se elimina de listo '); */
+                        listo.shift(0);
+                    }
+                }
+                
                     
             } else if(numRandom === 5){
-                saliente.push(ejecutando[0]);
-                console.log(ejecutando[0]+' pasa de ejecutando a saliente '+(id++));
-                sleep(2000);
-                /* console.log(ejecutando[0]+' Se elimina de ejecutando '+(id++)); */
-                ejecutando.shift(0);
+                if(ejecutando.length > 0){
+                    saliente.push(ejecutando[0]);
+                    console.log(ejecutando[0]+' pasa de ejecutando a saliente ');
+                    sleep(2000);
+                    /* console.log(ejecutando[0]+' Se elimina de ejecutando '); */
+                    ejecutando.shift(0);
+                } else{
+
+                }
+                
                 if(listo.length > 0){
                     ejecutando.push(listo[0]);
-                    console.log(listo[0]+' pasa de listo a ejecutando '+(id++));
+                    console.log(listo[0]+' pasa de listo a ejecutando ');
                     sleep(2000);
-                    /* console.log(listo[0]+' se elimina de listo '+(id++)); */
+                    /* console.log(listo[0]+' se elimina de listo '); */
                     listo.shift(0);
                 } 
+            } else if(numRandom===6){
+                if(bloqueado.length > 0){
+                    
+                    listo.push(bloqueado[0]);
+                    console.log(bloqueado[0]+' pasa de bloqueado a listo ');
+                    /* console.log(bloqueado[0]+' se elimina de bloqueado '); */
+                    bloqueado.shift(0);
+                    sleep(2000);
+                }
             }       
         }        
     }
