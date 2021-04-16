@@ -5,6 +5,7 @@ var id = 1,
     p = "Proceso";
 var hoy = new Date();
 var hora = hoy.getHours()+':'+hoy.getMinutes()+':'+hoy.getSeconds();
+var btnSimular = document.getElementById('simular');
 
     
 var nuevo = [],
@@ -14,11 +15,8 @@ var nuevo = [],
     saliente = [];
 var miCadenaDeTexto = ' ';
 
-function todo(){
-    
-    inicio();  
-    segundo();
-
+function todo(){  
+    inicio();    
 }
 
 function getRandomInt(min, max) {
@@ -26,18 +24,25 @@ function getRandomInt(min, max) {
 }
 
 function inicio(){
-    var p1 = 'Proceso',
-        numC = 0; 
-    var nuevoDiv = document.getElementById('nuevo');
 
-    var proceso = setInterval(() => {
-            nuevo.push(p1+(numC+1));
-            nuevoDiv.innerHTML += '<p class="inicioNuevo">'+nuevo[numC]+'</p>'; 
-            numC++; 
-            if(numC==5){
-                clearInterval(proceso);
-            }
-        }, 1000); 
+    if(saliente.length>0){
+        alert('Ya se simularon los procesos');
+    } else {
+        var p1 = 'Proceso',
+        numC = 0; 
+        var nuevoDiv = document.getElementById('nuevo');
+
+        var proceso = setInterval(() => {
+                        nuevo.push(p1+(numC+1));
+                        nuevoDiv.innerHTML += '<p class="inicioNuevo">'+nuevo[numC]+'</p>'; 
+                        numC++; 
+                        if(numC==5){
+                            clearInterval(proceso);
+                        }
+                }, 1000);
+                segundo();
+    }
+     
 }
 
 function segundo(){
@@ -57,6 +62,7 @@ function segundo(){
         var padre=document.getElementById('listo');
         padre.innerHTML += '<p class="inicioListo">'+listo[num]+'</p>'; 
         num++; 
+        btnSimular.disabled = true;
         if(num==5){
             
             if(ejecutando.length === 0){
@@ -164,8 +170,10 @@ function segundo(){
                                     sleep(ms);
                                 }
                             }
+                            btnSimular.disabled = true;
                         } else{
                             clearInterval(procesofinal);
+                            btnSimular.disabled = false;
                         }   
                     }, 1500);
                 }
@@ -173,5 +181,3 @@ function segundo(){
         }
     }, 1000);    
 }
-
-    
